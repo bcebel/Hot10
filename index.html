@@ -4,20 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    rel="stylesheet"
+    <rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"
+    crossorigin="anonymous">
     <link rel="stylesheet" href="./Develop/css/style.css" />
     <title>
       Hot 10! | Search Favorite Artists | Get Amazing Live Performances
     </title>
   </head>
 
-  <header>
-    <h1 class="top-header">Hot 10!</h1>
-  </header>
-
+  <body>
+    <header class="header">
+      <div class="search-container">
+        <h1 class="search-title">Hot 10 Search Engine!</h1>
+        <form id="search-form" class="search-form">
+          <input id="search-input" class="form-input" type="text" placeholder="Search!">
+          <select id="format-input" class="form-input">
+            <option value="" disabled selected>Select a format...</option>
+            <option value="artist-option">Artist Name</option>
+            <option value="genre-option">Music Genre</option>
+          </select>
+          <button class="btn btn-info btn-block">Search!</button>
+        </form>
+      </div>
+    </header>
+  
+    <script src="./assets/js/script.js"></script>
+  </body>
+  
+  </html>
   <body>
     <script src="./Develop/js/script.js"></script>
   </body>
