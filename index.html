@@ -15,26 +15,91 @@
   </head>
 
   <body>
-    <header class="header">
+    <!-- Header/search engine spot -->
+    <header id="header" class="header">
       <div class="search-container">
-        <h1 class="search-title">Hot 10 Search Engine!</h1>
+        <h1 class="search-title">HOT 10! Search for the Best!</h1>
         <form id="search-form" class="search-form">
           <input id="search-input" class="form-input" type="text" placeholder="Search!">
           <select id="format-input" class="form-input">
-            <option value="" disabled selected>Select a format...</option>
-            <option value="artist-option">Artist Name</option>
-            <option value="genre-option">Music Genre</option>
+            <!-- Drop-down user choices -->
+            <option value="" disabled selected>Select Preference</option>
+            <option value="artist-option" class="option-1">Artist Name</option>
+            <option value="genre-option" class="option-2">Music Genre</option>
           </select>
           <button class="btn btn-info btn-block">Search!</button>
         </form>
       </div>
     </header>
-  
-    <script src="./assets/js/script.js"></script>
-  </body>
-  
-  </html>
-  <body>
+
+    <main id="main-container" class="main-container">
+      <div class="sub-container">
+        <h2 class="results-title">Showing: <span id="user-artist-genre"> 's HOT10!</span></h2>
+        <!-- There needs to be an empty HTML element for us to write results data to. -->
+        <div id="results" class="list-group"></div>
+        <!-- id's are numbered 0-9, for the top 10 results: -->
+          <div class="result-card result-0">
+            <!-- #1 result goes here with href/a tag? -->
+          </div>
+          <div class="result-card result-1">
+            <!-- #2 result goes here with href/a tag? -->
+          </div>
+          <div class="result-card result-2">
+            <!-- #3 result goes here with href/a tag? -->
+          </div>
+          <div class="result-card result-3">
+            <!-- #4 result goes here with href/a tag? -->
+          </div>          
+          <div class="result-card result-4">
+            <!-- #5 result goes here with href/a tag? -->
+          </div>
+          <div class="result-card result-5">
+            <!-- #6 result goes here with href/a tag? -->
+          </div>          
+          <div class="result-card result-6">
+            <!-- #7 result goes here with href/a tag? -->
+          </div>
+          <div class="result-card result-7">
+            <!-- #8 result goes here with href/a tag? -->
+          </div>          
+          <div class="result-card result-8">
+            <!-- #9 result goes here with href/a tag? -->
+          </div>
+          <div class="result-card result-9">
+            <!-- #10 result goes here with href/a tag? -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <!-- Section for recent searches/local storage -->
+      <h3 class="footer-title">Recent Searches:</h3>
+      <div class="search-history">
+        <ul class="history-group">
+          <button class="history-btn" id="search0"></button>
+          <button class="history-btn" id="search1"></button>
+          <button class="history-btn" id="search2"></button>
+          <button class="history-btn" id="search3"></button>
+          <button class="history-btn" id="search4"></button>
+          <button class="history-btn" id="search5"></button>
+          <button class="history-btn" id="search6"></button>
+          <button class="history-btn" id="search7"></button>
+          <button class="history-btn" id="search8"></button>
+          <button class="history-btn" id="search9"></button>
+        </ul>
+        <!-- need to give this button functionality -->
+        <button
+          type="button"
+          class="history-btn"
+          id="clearhist"
+        >
+          Clear History
+        </button>
+      </div>
+    </div>
+    </footer>
+
     <script src="./Develop/js/script.js"></script>
   </body>
 </html>
