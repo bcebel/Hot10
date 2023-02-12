@@ -1,3 +1,1 @@
-
-
-
+// DEFINE HTML VARIABLES:
