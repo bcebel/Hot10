@@ -26,7 +26,7 @@
             type="text"
             placeholder="Search!"
           />
-          <button id=search class="btn btn-info btn-block">Search!</button>
+          <button id="search" class="btn btn-info btn-block">Search!</button>
         </form>
       </div>
     </header>
@@ -118,7 +118,7 @@
     <footer id="footer" class="footer">
       <h3 class="footer-title">Recent Searches:</h3>
       <div class="search-history">
-        <ul class="history-group">
+        <ul id="search" class="history-group artists">
           <button class="history-btn hist-item" id="search0"></button>
           <button class="history-btn hist-item" id="search1"></button>
           <button class="history-btn hist-item" id="search2"></button>
@@ -137,8 +137,13 @@
       </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./Develop/js/script.js"></script>
-    <script src="./Develop/js/lastfm.js"></script>
-    <script src="./Develop/js/youtube.js"></script>
+    <!-- <script src="./Develop/js/lastfm.js"></script> -->
+    <!-- <script src="./Develop/js/youtube.js"></script> -->
   </body>
 </html>
