@@ -1,33 +1,22 @@
+const form = document.getElementById('search-form');
+const name = form.elements['search-input'];
+let fullName;
+console.log(form);
+console.log(name);
+//attaches to html
+const lastFMdiv=document.getElementById('results-right');
 
-var requestUrlTown = 'https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=journey&api_key=291cf301be6213cb932aa743e9706019&format=json'
-var responseTextTown = document.getElementById('response-text');
-var latitude;
-var longitude;
-var cityContainer = document.getElementById('lists');
-var fetchButton = document.getElementById('fetch-button');
+var requestUrl;
+var getSimilarURL;
+var musicBrainzURL;
+var musicBrainzID;
+var getTopAlbumsURL;
+var lastFMImg;
+var lastFMImg2;
+var lastFMImg3;
+var lastFMImg4;
+var lastFMImg5;
 
-function getApiTown(requestUrlTown) {
-  fetch(requestUrlTown)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-    console.log(data.toptracks);
-    console.log(data.toptracks.track[0]);
-    console.log(data.toptracks.track[0].name)
-    console.log(data.toptracks.track[0].url)
-
-latitude=data.toptracks.track[0].name;
-longitude=data.toptracks;
-
-
-
-console.log(latitude +"changes in")
-  var requestUrl = 'https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist='+cher+'&api_key=291cf301be6213cb932aa743e9706019&format=json';
-
-  var responseText = document.getElementById('response-text');
-  
 function getApi(requestUrl) {
     fetch(requestUrl)
     .then(function (response) {
@@ -35,41 +24,123 @@ function getApi(requestUrl) {
     })
     .then(function (data) {
       console.log(data);
+
       var cityName = document.createElement('li');
-      cityName.textContent = data.city.name;
-      cityContainer.append(cityName);
+      console.log(data);
+      console.log(data.toptracks);
+      console.log(data.toptracks.track[0]);
+      console.log(data.toptracks.track[0].name)
+      console.log(data.toptracks.track[0].url)
+  
+        var bandName = document.createElement('h1');
+        bandName.textContent = data.toptracks["@attr"].artist;
+        lastFMdiv.prepend(bandName)
 
+        var topTracks = document.createElement('li');
+        topTracks.textContent ="Top Song "+data.toptracks.track[0].name
+        lastFMdiv.append(topTracks)
 
+        musicBrainzID=data.toptracks.track[0].artist.mbid
+        console.log(musicBrainzID);
 
-      for (var i = 0; i < data.list.length; i++) {
-        var temperature = document.createElement('li');
-        temperature.textContent = data.list[i].main.temp;
-        cityContainer.append(temperature)
-console.log(data.list[i].weather.icon)
-        var url =  "http://openweathermap.org/img/wn/"+data.list[i].weather[0].icon+"@2x.png";
-        var image = new Image();
-        image.src=url;
-        document.getElementById('lists').appendChild(image);
+musicBrainzURL='https://musicbrainz.org/ws/2/artist/'+musicBrainzID+'?inc=releases+genres+tags+release-groups+url-rels&type=&fmt=json';
+musicBrainzAPI(musicBrainzURL);
 
-        var main = document.createElement('li');
-        main.textContent = data.list[i].weather[0].main;
-        cityContainer.append(main);
+      })
+    };
 
-        var description = document.createElement('li');
-        description.textContent = data.list[i].weather[0].description;
-        cityContainer.append(description);
+  function getSimilar(getSimilarURL) {
+    fetch(getSimilarURL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+
+      var cityName = document.createElement('li');
+      console.log(data);
       
-      }
 
-      
-    });
-  }
-  getApi(requestUrl)
-})
-};
-getApiTown(requestUrlTown);
+        var similarArtists = document.createElement('li');
+        similarArtists.textContent = "Similar Artists "+data.similarartists.artist[0].name;
+        lastFMdiv.append(similarArtists)
+
+      })
+    };
+
+    function getTopAlbums(getTopAlbumsURL) {
+        fetch(getTopAlbumsURL)
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+    
+          
+    
+            var topAlbums = document.createElement('li');
+            topAlbums.textContent = "Top Album "+data.topalbums.album[0].name
+            lastFMdiv.append(topAlbums)
 
 
-// and again
+
+            lastFMImg =  data.topalbums.album[0].image[3]["#text"]
+            var image = new Image();
+            image.src=lastFMImg;
+            document.getElementById('results-right').appendChild(image);
+
+            lastFMImg2 =  data.topalbums.album[1].image[3]["#text"]
+            var image2 = new Image();
+            image2.src=lastFMImg2;
+            document.getElementById('results-right').appendChild(image2);
+
+            lastFMImg3 =  data.topalbums.album[2].image[3]["#text"]
+            var image3 = new Image();
+            image3.src=lastFMImg3;
+            document.getElementById('results-right').appendChild(image3);
+
+            lastFMImg4 =  data.topalbums.album[3].image[3]["#text"]
+            var image4 = new Image();
+            image4.src=lastFMImg4;
+            document.getElementById('results-right').appendChild(image4);
+
+            lastFMImg5 =  data.topalbums.album[4].image[3]["#text"]
+            var image5 = new Image();
+            image5.src=lastFMImg5;
+            document.getElementById('results-right').appendChild(image5);
+
+          })
+        };
+
+        function musicBrainzAPI(musicBrainzURL) {
+            fetch(musicBrainzURL)
+            .then(function (response) {
+              return response.json();
+            })
+
+        }
+
+        function albumCover(albumCoverURL) {
+            fetch(musicBrainzURL)
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (data) {
+              console.log(data);
+
+            })
+        }
+        https://ia801604.us.archive.org/28/items/mbid-
+form.addEventListener('submit', function(event){event.preventDefault();
+    fullName = name.value;
+    console.log(fullName);
+    requestUrl = 'https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist='+fullName+'&api_key=291cf301be6213cb932aa743e9706019&format=json';
+    getSimilarURL='https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist='+fullName+'&api_key=291cf301be6213cb932aa743e9706019&format=json';
+    getTopAlbumsURL= 'https://ws.audioscrobbler.com//2.0/?method=artist.gettopalbums&artist='+fullName+'&api_key=291cf301be6213cb932aa743e9706019&format=json'
+    getApi(requestUrl);
+    getSimilar(getSimilarURL);
+getTopAlbums(getTopAlbumsURL);
+});
+
 
 
