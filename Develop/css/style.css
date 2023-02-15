@@ -45,6 +45,16 @@ header {
 
 main {
     display: block;
+    color: white;
+
+}
+
+#results-left,
+#results-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
 }
 
 /* to hide history item slot until user has that many history searches */
