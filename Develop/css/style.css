@@ -50,7 +50,11 @@ main {
 
 /* to hide history item slot until user has that many history searches */
 .hist-item {
-    display: none;
+
+}
+
+.footer-title {
+    color:rgb(238, 245, 238);
 }
 
 footer {
