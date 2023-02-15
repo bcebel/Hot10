@@ -44,7 +44,7 @@ $(document).ready(function () {
 
     let lastIndex = historydisplay.length - 1;
     // concat a jQuery selector & click listener that calls savedsearch()
-    $("#search-hist" + lastIndex).on("click", savedSearch);
+    $("#search" + lastIndex).on("click", savedSearch);
     // .trigger() method that 'clicks' on that #search
     $("#search-hist" + lastIndex).trigger("click");
   }
@@ -80,7 +80,7 @@ function savedSearch() {
   // var for text of pastcityname
   let $oldArtist = $(this).text();
   // put it in the input field
-  $("#search-input").val($oldArtist);
+  $("#search-hist").val($oldArtist);
   // this triggers the original click listener, above citysearch()
   $clicked.trigger("click");
 }
