@@ -84,12 +84,12 @@ musicBrainzAPI(musicBrainzURL);
 */
 
 
-            lastFMImg =  data.topalbums.album[0].image[3]["#text"]
+            lastFMImg =  data.topalbums.album[0].image[2]["#text"]
             var image = new Image();
             image.src=lastFMImg;
             document.getElementById('results-right').appendChild(image);
 
-            lastFMImg2 =  data.topalbums.album[1].image[3]["#text"]
+            lastFMImg2 =  data.topalbums.album[1].image[2]["#text"]
             var image2 = new Image();
             image2.src=lastFMImg2;
             document.getElementById('results-right').appendChild(image2);
