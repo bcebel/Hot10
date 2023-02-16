@@ -25,7 +25,7 @@ output.append(myList);
 //Add new eventListener for retrieving userinput
 formYouTube.addEventListener('submit',(e)=>{
     searchTerm = nameYouTube.value;
-    const url = `${base}${searchTerm}&maxResults=10`
+    const url = `${base}${searchTerm}&maxResults=11`
     fetch(url).then(rep=>rep.json())
     .then((data)=>{
         addData(data.items);
