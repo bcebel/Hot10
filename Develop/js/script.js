@@ -49,6 +49,8 @@ function renderArtists() {
 // Listens for form submit, fetches current artist URL
 searchBtn.addEventListener("submit", function (event) {
   event.preventDefault();
+  //run the function to push to local storage
+  addToHistory();
   // Clears any existing artist
   listArtist.innerHTML = "";
 });
