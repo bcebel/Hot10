@@ -27,19 +27,16 @@ function getApi(requestUrl) {
 
       var cityName = document.createElement('li');
       console.log(data);
-      console.log(data.toptracks);
-      console.log(data.toptracks.track[0]);
-      console.log(data.toptracks.track[0].name)
-      console.log(data.toptracks.track[0].url)
-  
+
+  /*
         var bandName = document.createElement('h1');
         bandName.textContent = data.toptracks["@attr"].artist;
         lastFMdiv.prepend(bandName)
-/*
+
         var topTracks = document.createElement('li');
         topTracks.textContent ="Top Song "+data.toptracks.track[0].name
         lastFMdiv.append(topTracks)
-*/
+
         musicBrainzID=data.toptracks.track[0].artist.mbid
         console.log(musicBrainzID);
 
@@ -64,7 +61,7 @@ musicBrainzAPI(musicBrainzURL);
         var similarArtists = document.createElement('li');
         similarArtists.textContent = "Similar Artists "+data.similarartists.artist[0].name;
         lastFMdiv.append(similarArtists)
-
+*/
       })
     };
 
@@ -84,12 +81,12 @@ musicBrainzAPI(musicBrainzURL);
 */
 
 
-            lastFMImg =  data.topalbums.album[0].image[2]["#text"]
+            lastFMImg =  data.topalbums.album[0].image[3]["#text"]
             var image = new Image();
             image.src=lastFMImg;
             document.getElementById('results-right').appendChild(image);
 
-            lastFMImg2 =  data.topalbums.album[1].image[2]["#text"]
+            lastFMImg2 =  data.topalbums.album[1].image[3]["#text"]
             var image2 = new Image();
             image2.src=lastFMImg2;
             document.getElementById('results-right').appendChild(image2);
@@ -142,6 +139,7 @@ musicBrainzAPI(musicBrainzURL);
           })
         };
 
+        /*
         function musicBrainzAPI(musicBrainzURL) {
             fetch(musicBrainzURL)
             .then(function (response) {
@@ -149,6 +147,7 @@ musicBrainzAPI(musicBrainzURL);
             })
 
         }
+        */
 /*
         function albumCover(albumCoverURL) {
             fetch(musicBrainzURL)
@@ -168,8 +167,8 @@ form.addEventListener('submit', function(event){event.preventDefault();
     requestUrl = 'https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist='+fullName+'&api_key=291cf301be6213cb932aa743e9706019&format=json';
     getSimilarURL='https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist='+fullName+'&api_key=291cf301be6213cb932aa743e9706019&format=json';
     getTopAlbumsURL= 'https://ws.audioscrobbler.com//2.0/?method=artist.gettopalbums&artist='+fullName+'&api_key=291cf301be6213cb932aa743e9706019&format=json'
-    getApi(requestUrl);
-    getSimilar(getSimilarURL);
+   // getApi(requestUrl);
+  //  getSimilar(getSimilarURL);
 getTopAlbums(getTopAlbumsURL);
 });
 
