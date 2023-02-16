@@ -71,11 +71,7 @@ main {
 
 }
 
-.footer-title {
+.history-title {
     color:rgb(238, 245, 238);
 }
 
-footer {
-    display: block;
-    text-align: center;
-}
