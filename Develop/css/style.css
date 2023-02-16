@@ -49,6 +49,14 @@ main {
 
 }
 
+#results-left {
+    float: left;
+}
+
+#results-right {
+    float: right;
+}
+
 #results-left,
 #results-right {
     display: flex;
