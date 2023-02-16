@@ -13,7 +13,7 @@ var artistName = searchBox.value;
 
 function addToHistory() {
   // Pushing searchbox value to artists array, then storing array in localStorage
-  userInput.push(searchBox.value);
+  artistsArray.push(artistName);
   localStorage.setItem("Button", JSON.stringify(artistsArray));
 }
 
@@ -35,7 +35,9 @@ function list() {
 
 function renderArtists() {
   // Grabbing the artists array from local storage
-  var artistsArray = JSON.parse(localStorage.getItem("Button", artistsArray));
+  var artistsArray = JSON.parse(
+    localStorage.getItem("savedArtists", artistsArray)
+  );
   for (var i = 0; i < artistsArray.length; i++) {
     // adding userinput to the array
     listArtist.textContent = artistsArray[i];
@@ -59,7 +61,8 @@ row1.addEventListener("click", function (event) {
   }
 });
 // Running the re-render if the artists array in local storage has contents
-if (JSON.parse(localStorage.getItem("Button", artistsArray)) !== null) {
+if (JSON.parse(localStorage.getItem("savedArtists", artistsArray)) !== null) {
   renderArtists();
 } else {
+  // reload();
 }
