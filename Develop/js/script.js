@@ -14,7 +14,7 @@ var artistName = searchBox.value;
 function addToHistory() {
   // Pushing searchbox value to artists array, then storing array in localStorage
   artistsArray.push(artistName);
-  localStorage.setItem("Button", JSON.stringify(artistsArray));
+  localStorage.setItem("savedArtists", JSON.stringify(artistsArray));
 }
 
 // Lists entered artists
