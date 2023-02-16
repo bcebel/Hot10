@@ -3,7 +3,7 @@ var searchBox = document.querySelector("#search-box");
 var formJs = document.querySelector("#search");
 var artistListContainer = document.createElement("div");
 var artistList = document.createElement("ul");
-var artist = document.querySelector("#search-input");
+var listArtist = document.querySelector("#search-input");
 var artistList = document.querySelector("#artist-list");
 var row1 = document.querySelector("#row1");
 
@@ -17,7 +17,7 @@ function list() {
   listArtist.textContent = searchBox.value;
   // Pushing searchbox value to artists array, then storing array in localStorage
   artists.push(searchBox.value);
-  console.log(artists);
+  console.log(listArtist);
   localStorage.setItem("Artists", JSON.stringify(artistsArray));
   // Checking to see if the div and ul elements already exist, then appending them
   if (!row1.children[1]) {
@@ -63,10 +63,10 @@ formJs.addEventListener("submit", function (event) {
 });
 
 // Regenerates the statistics for the artist name the user clicks on
-row1.addEventListener("click", function (event) {
+listArtist.addEventListener("click", function (event) {
   var element = event.target;
   if (element.matches(".list-button")) {
-    artist.innerHTML = "";
+    listArtist.innerHTML = "";
     searchBox.value = element.textContent;
     console.log(searchBox.value);
   }
