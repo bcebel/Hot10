@@ -35,11 +35,11 @@ function getApi(requestUrl) {
         var bandName = document.createElement('h1');
         bandName.textContent = data.toptracks["@attr"].artist;
         lastFMdiv.prepend(bandName)
-
+/*
         var topTracks = document.createElement('li');
         topTracks.textContent ="Top Song "+data.toptracks.track[0].name
         lastFMdiv.append(topTracks)
-
+*/
         musicBrainzID=data.toptracks.track[0].artist.mbid
         console.log(musicBrainzID);
 
@@ -77,19 +77,19 @@ musicBrainzAPI(musicBrainzURL);
           console.log(data);
     
           
-    
+    /*
             var topAlbums = document.createElement('li');
             topAlbums.textContent = "Top Album "+data.topalbums.album[0].name
             lastFMdiv.append(topAlbums)
+*/
 
 
-
-            lastFMImg =  data.topalbums.album[0].image[3]["#text"]
+            lastFMImg =  data.topalbums.album[0].image[2]["#text"]
             var image = new Image();
             image.src=lastFMImg;
             document.getElementById('results-right').appendChild(image);
 
-            lastFMImg2 =  data.topalbums.album[1].image[3]["#text"]
+            lastFMImg2 =  data.topalbums.album[1].image[2]["#text"]
             var image2 = new Image();
             image2.src=lastFMImg2;
             document.getElementById('results-right').appendChild(image2);
@@ -149,7 +149,7 @@ musicBrainzAPI(musicBrainzURL);
             })
 
         }
-
+/*
         function albumCover(albumCoverURL) {
             fetch(musicBrainzURL)
             .then(function (response) {
@@ -160,6 +160,7 @@ musicBrainzAPI(musicBrainzURL);
 
             })
         }
+        */
   //      https://ia801604.us.archive.org/28/items/mbid-
 form.addEventListener('submit', function(event){event.preventDefault();
     fullName = name.value;

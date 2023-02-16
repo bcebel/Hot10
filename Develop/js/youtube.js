@@ -21,6 +21,7 @@ const myList = document.createElement("div");
 output.append(myList);
 
 //Add new eventListener for retrieving userinput
+
 formYouTube.addEventListener("submit", (e) => {
   searchTerm = nameYouTube.value;
   const url = `${base}${searchTerm}&maxResults=11`;
