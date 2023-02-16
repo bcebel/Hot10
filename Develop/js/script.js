@@ -53,7 +53,7 @@ function renderArtists() {
   }
 }
 // Listens for form submit, fetches current artist URL
-formJs.addEventListener("submit", function (event) {
+row1.addEventListener("submit", function (event) {
   event.preventDefault();
   // Clears any existing artist
   artist.innerHTML = "";
