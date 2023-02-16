@@ -1,6 +1,6 @@
 
 const formYouTube = document.getElementById('search-form');
-const nameYouTube = form.elements['search-input'];
+const nameYouTube = formYouTube.elements['search-input'];
 
 
 const apiKey = "AIzaSyD_OontTe5oxGL6ubzggjNv1koAaRXjgNE";
@@ -59,4 +59,5 @@ function addData(arr){
 }
 
 formYouTube.addEventListener('submit', function(event){event.preventDefault();
-    searchTerm = nameYouTube.value;}
+    searchTerm = nameYouTube.value;});
+    console.log(searchTerm);
