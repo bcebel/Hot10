@@ -1,5 +1,10 @@
+
+const formYouTube = document.getElementById('search-form');
+const nameYouTube = formYouTube.elements['search-input'];
+
+
 const apiKey = "AIzaSyD_OontTe5oxGL6ubzggjNv1koAaRXjgNE";
-const searchTerm = '';
+//const searchTerm = '';
 const base = `https://www.googleapis.com/youtube/v3/search/?part=snippet&key=${apiKey}&q=`;
 
 const output = document.querySelector('.output');
@@ -52,3 +57,7 @@ function addData(arr){
 
     });
 }
+
+formYouTube.addEventListener('submit', function(event){event.preventDefault();
+    searchTerm = nameYouTube.value;});
+    console.log(searchTerm);

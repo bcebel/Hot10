@@ -130,7 +130,7 @@ musicBrainzAPI(musicBrainzURL);
 
             })
         }
-        https://ia801604.us.archive.org/28/items/mbid-
+  //      https://ia801604.us.archive.org/28/items/mbid-
 form.addEventListener('submit', function(event){event.preventDefault();
     fullName = name.value;
     console.log(fullName);
