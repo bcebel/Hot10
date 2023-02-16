@@ -53,7 +53,7 @@ main {
 #results-right {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 30%;
     height: auto;
 }
 
