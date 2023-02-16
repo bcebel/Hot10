@@ -109,6 +109,36 @@ musicBrainzAPI(musicBrainzURL);
             image5.src=lastFMImg5;
             document.getElementById('results-right').appendChild(image5);
 
+
+            lastFMImg6 =  data.topalbums.album[7].image[3]["#text"]
+            var image6 = new Image();
+            image6.src=lastFMImg6;
+            document.getElementById('results-right').appendChild(image6);
+
+
+            lastFMImg7 =  data.topalbums.album[6].image[3]["#text"]
+            var image7 = new Image();
+            image7.src=lastFMImg7;
+            document.getElementById('results-right').appendChild(image7);
+
+
+            lastFMImg8 =  data.topalbums.album[7].image[3]["#text"]
+            var image8 = new Image();
+            image8.src=lastFMImg8;
+            document.getElementById('results-right').appendChild(image8);
+
+
+            lastFMImg9 =  data.topalbums.album[8].image[3]["#text"]
+            var image9 = new Image();
+            image9.src=lastFMImg9;
+            document.getElementById('results-right').appendChild(image9);
+
+
+            lastFMImg10 =  data.topalbums.album[9].image[3]["#text"]
+            var image10 = new Image();
+            image10.src=lastFMImg10;
+            document.getElementById('results-right').appendChild(image10);
+
           })
         };
 
