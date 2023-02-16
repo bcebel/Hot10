@@ -8,22 +8,23 @@ const apiKey = "AIzaSyD_OontTe5oxGL6ubzggjNv1koAaRXjgNE";
 const base = `https://www.googleapis.com/youtube/v3/search/?part=snippet&key=${apiKey}&q=`;
 
 const output = document.querySelector('.output');
-output.textContent = 'Search Me :  '; 
 const myInput = document.createElement('input');
 output.append(myInput);
 myInput.setAttribute('type','text');
+myInput.style.display="none";
 myInput.value = 'Bosstones';
 
 const btn = document.createElement('button');
 btn.textContent = 'Get Data';
-btn.style.display = 'block';
+btn.style.display = 'none';
 output.append(btn);
 
 const myList = document.createElement('div');
 output.append(myList);
 
 //Add new eventListener for retrieving userinput
-btn.addEventListener('click',(e)=>{
+formYouTube.addEventListener('submit',(e)=>{
+    searchTerm = nameYouTube.value;
     const url = `${base}${searchTerm}&maxResults=10`
     fetch(url).then(rep=>rep.json())
     .then((data)=>{
@@ -58,6 +59,8 @@ function addData(arr){
     });
 }
 
+/*
 formYouTube.addEventListener('submit', function(event){event.preventDefault();
     searchTerm = nameYouTube.value;});
     console.log(searchTerm);
+    */
