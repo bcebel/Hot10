@@ -62,5 +62,4 @@ row1.addEventListener("click", function (event) {
 if (JSON.parse(localStorage.getItem("Button", artistsArray)) !== null) {
   renderArtists();
 } else {
-  reload();
 }
