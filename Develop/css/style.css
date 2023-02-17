@@ -58,13 +58,14 @@ main {
 }
 
 #results-left,
+/*
 #results-right {
     display: flex;
     flex-direction: column;
-    width: 10%;
+    width: 50%;
     height: auto;
 }
-
+*/
 /* to hide history item slot until user has that many history searches */
 .hist-item {
 
@@ -74,3 +75,12 @@ main {
     color:rgb(238, 245, 238);
 }
 
+.test {
+    display: flex;
+    border: white solid 3px;
+    margin: 10px;
+    width: 500px;
+    height: 500px;
+align-content: center;
+align-items: center;
+}
