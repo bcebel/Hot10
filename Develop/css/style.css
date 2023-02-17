@@ -85,6 +85,13 @@ align-content: center;
 align-items: center;
 }
 #ytDiv{
+    background-color: white;
     border: white solid 3px;
-    width: fit-content;
+    border-radius: 10px;
+    width: 524px;
+    height: auto;
+    align-content: center;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    color: black;
 }
