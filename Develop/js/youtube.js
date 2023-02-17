@@ -17,12 +17,13 @@ btn.style.display = 'none';
 output.append(btn);
 
 const myList = document.createElement('div');
+myList.setAttribute("class","gridContainer")
 output.append(myList);
 
 
 formYouTube.addEventListener('submit',(e)=>{
     searchTerm = nameYouTube.value;
-    const url = `${base}${searchTerm}&maxResults=10`
+    const url = `${base}${searchTerm}&maxResults=11`
     fetch(url).then(rep=>rep.json())
     .then((data)=>{
         addData(data.items);
