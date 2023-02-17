@@ -1,10 +1,7 @@
 
 const formYouTube = document.getElementById('search-form');
 const nameYouTube = formYouTube.elements['search-input'];
-
-
 const apiKey = "AIzaSyDebhxb3sfaJQ1TJJhxTbLQEYMaoplTC-U";
-//const searchTerm = '';
 const base = `https://www.googleapis.com/youtube/v3/search/?part=snippet&key=${apiKey}&q=`;
 
 const output = document.querySelector('.output');
@@ -22,7 +19,6 @@ output.append(btn);
 const myList = document.createElement('div');
 output.append(myList);
 
-//Add new eventListener for retrieving userinput
 formYouTube.addEventListener('submit',(e)=>{
     searchTerm = nameYouTube.value;
     const url = `${base}${searchTerm}&maxResults=10`
@@ -43,7 +39,6 @@ function addData(arr){
         main.addEventListener('click', function() {
             window.open(myLink.href)
           });
-        // main.textContent = res.id.videoId;
         const myLink = document.createElement('a');
         myLink.textContent = res.id.videoId;
         myLink.setAttribute('href', yt+res.id.videoId)
@@ -55,16 +50,8 @@ function addData(arr){
         thumb.setAttribute('src', res.snippet.thumbnails.high.url);
         const des = document.createElement('p');
         main.append(des);
-        main.style = 'align-content center';
         des.innerHTML = `<h3>${res.snippet.title}</h3><small>${res.snippet.description}</small>`;
     }
 
     });
 }
-
-/*
-formYouTube.addEventListener('submit', function(event){event.preventDefault();
-    searchTerm = nameYouTube.value;});
-    console.log(searchTerm);
-    */
-// COKE IS BETTER THAN PEPSI
