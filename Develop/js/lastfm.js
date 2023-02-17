@@ -84,79 +84,153 @@ musicBrainzAPI(musicBrainzURL);
             lastFMdiv.append(topAlbums)
 */
 
-
+const myLinkFM = document.createElement('a');
 const imageDiv = document.createElement('div');
 imageDiv.setAttribute("class", "test");
 lastFMImg = data.topalbums.album[0].image[3]["#text"]
 var image = new Image();
 image.src = lastFMImg;
 imageDiv.append(image);
+imageDiv.addEventListener('click', function() {
+  window.open(myLinkFM.href)});
+  myLinkFM.textContent=data.topalbums.album[0].url;
+  myLinkFM.setAttribute('href',data.topalbums.album[0].url)
+  myLinkFM.setAttribute('target','_blank');
+  console.log(data.topalbums.album[0].url);
 
+
+  const myLinkFM2 = document.createElement('a');
 const imageDiv2 = document.createElement('div');
 imageDiv2.setAttribute("class", "test");
 lastFMImg2 = data.topalbums.album[1].image[3]["#text"]
 var image2 = new Image();
 image2.src = lastFMImg2;
 imageDiv2.append(image2);
+imageDiv2.addEventListener('click', function() {
+  window.open(myLinkFM2.href)});
+  myLinkFM2.textContent=data.topalbums.album[1].url;
+  myLinkFM2.setAttribute('href',data.topalbums.album[1].url)
+  myLinkFM2.setAttribute('target','_blank');
+  console.log(data.topalbums.album[1].url);
 
+const myLinkFM3 = document.createElement('a');
 const imageDiv3 = document.createElement('div');
 imageDiv3.setAttribute("class", "test");
 lastFMImg3 = data.topalbums.album[2].image[3]["#text"]
 var image3 = new Image();
 image3.src = lastFMImg3;
 imageDiv3.append(image3);
+imageDiv3.addEventListener('click', function() {
+  window.open(myLinkFM3.href)});
+  myLinkFM3.textContent=data.topalbums.album[2].url;
+  myLinkFM3.setAttribute('href',data.topalbums.album[2].url)
+  myLinkFM3.setAttribute('target','_blank');
+  console.log(data.topalbums.album[2].url);
 
+
+  const myLinkFM4 = document.createElement('a');
 const imageDiv4 = document.createElement('div');
 imageDiv4.setAttribute("class", "test");
 lastFMImg4 = data.topalbums.album[3].image[3]["#text"]
 var image4 = new Image();
 image4.src = lastFMImg4;
 imageDiv4.append(image4);
+imageDiv4.addEventListener('click', function() {
+  window.open(myLinkFM4.href)});
+  myLinkFM4.textContent=data.topalbums.album[3].url;
+  myLinkFM4.setAttribute('href',data.topalbums.album[3].url)
+  myLinkFM4.setAttribute('target','_blank');
+  console.log(data.topalbums.album[3].url);
 
+  const myLinkFM5 = document.createElement('a');
 const imageDiv5 = document.createElement('div');
 imageDiv5.setAttribute("class", "test");
 lastFMImg5 = data.topalbums.album[4].image[3]["#text"]
 var image5 = new Image();
 image5.src = lastFMImg5;
 imageDiv5.append(image5);
+imageDiv5.addEventListener('click', function() {
+  window.open(myLinkFM5.href)});
+  myLinkFM5.textContent=data.topalbums.album[4].url;
+  myLinkFM5.setAttribute('href',data.topalbums.album[4].url)
+  myLinkFM5.setAttribute('target','_blank');
+  console.log(data.topalbums.album[4].url);
 
 
+  const myLinkFM6 = document.createElement('a');
 const imageDiv6 = document.createElement('div');
 imageDiv6.setAttribute("class", "test");
-lastFMImg6 = data.topalbums.album[7].image[3]["#text"]
+lastFMImg6 = data.topalbums.album[5].image[3]["#text"]
 var image6 = new Image();
 image6.src = lastFMImg6;
 imageDiv6.append(image6);
+imageDiv6.addEventListener('click', function() {
+  window.open(myLinkFM6.href)});
+  myLinkFM6.textContent=data.topalbums.album[5].url;
+  myLinkFM6.setAttribute('href',data.topalbums.album[5].url)
+  myLinkFM6.setAttribute('target','_blank');
+  console.log(data.topalbums.album[5].url);
 
+
+  const myLinkFM7 = document.createElement('a');
 const imageDiv7 = document.createElement('div');
 imageDiv7.setAttribute("class", "test");
 lastFMImg7 = data.topalbums.album[6].image[3]["#text"]
 var image7 = new Image();
 image7.src = lastFMImg7;
 imageDiv7.append(image7);
+imageDiv7.addEventListener('click', function() {
+  window.open(myLinkFM7.href)});
+  myLinkFM7.textContent=data.topalbums.album[6].url;
+  myLinkFM7.setAttribute('href',data.topalbums.album[6].url)
+  myLinkFM7.setAttribute('target','_blank');
+  console.log(data.topalbums.album[6].url);
 
 
+  const myLinkFM8 = document.createElement('a');
 const imageDiv8 = document.createElement('div');
 imageDiv8.setAttribute("class", "test");
 lastFMImg8 = data.topalbums.album[7].image[3]["#text"]
 var image8 = new Image();
 image8.src = lastFMImg8;
 imageDiv8.append(image8);
+imageDiv8.addEventListener('click', function() {
+  window.open(myLinkFM8.href)});
+  myLinkFM8.textContent=data.topalbums.album[7].url;
+  myLinkFM8.setAttribute('href',data.topalbums.album[7].url)
+  myLinkFM8.setAttribute('target','_blank');
+  console.log(data.topalbums.album[7].url);
 
+
+  const myLinkFM9 = document.createElement('a');
 const imageDiv9 = document.createElement('div');
 imageDiv9.setAttribute("class", "test");
 lastFMImg9 = data.topalbums.album[8].image[3]["#text"]
 var image9 = new Image();
 image9.src = lastFMImg9;
 imageDiv9.append(image9);
+imageDiv9.addEventListener('click', function() {
+  window.open(myLinkFM9.href)});
+  myLinkFM9.textContent=data.topalbums.album[8].url;
+  myLinkFM9.setAttribute('href',data.topalbums.album[8].url)
+  myLinkFM9.setAttribute('target','_blank');
+  console.log(data.topalbums.album[8].url);
 
 
+  const myLinkFM10 = document.createElement('a');
 const imageDiv10 = document.createElement('div');
 imageDiv10.setAttribute("class", "test");
 lastFMImg10 = data.topalbums.album[9].image[3]["#text"]
 var image10 = new Image();
 image10.src = lastFMImg10;
 imageDiv10.append(image10);
+imageDiv10.addEventListener('click', function() {
+  window.open(myLinkFM10.href)});
+  myLinkFM10.textContent=data.topalbums.album[9].url;
+  myLinkFM10.setAttribute('href',data.topalbums.album[9].url)
+  myLinkFM10.setAttribute('target','_blank');
+  console.log(data.topalbums.album[1].url);
+
 
 const gridContainerLastFM=document.createElement('div');
 gridContainerLastFM.setAttribute("class", "gridContainer")
@@ -208,4 +282,14 @@ getTopAlbums(getTopAlbumsURL);
 });
 
 
+/*
+//        main.addEventListener('click', function() {
+  window.open(myLink.href)
+});
 
+const myLink = document.createElement('a');
+myLink.textContent = res.id.videoId;
+myLink.setAttribute('href', yt+res.id.videoId)
+myLink.setAttribute('target','_blank');
+console.log(res.snippet.description);
+*/
