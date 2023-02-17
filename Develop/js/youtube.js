@@ -38,6 +38,7 @@ function addData(arr) {
   arr.forEach((res) => {
     if (res.id.videoId) {
       const main = document.createElement("div");
+      main.setAttribute("class","test")
       myList.append(main);
       // main.textContent = res.id.videoId;
       const myLink = document.createElement("a");
