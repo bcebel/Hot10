@@ -1,21 +1,10 @@
 
 const formYouTube = document.getElementById('search-form');
 const nameYouTube = formYouTube.elements['search-input'];
-const apiKey = "AIzaSyBWD4SL4KSkb58Wb7vcw2nquiNqQhZBEnM";
+const apiKey = "AIzaSyDIqwl4ZtaBrYCWStRfvbviqWbDNsv9zls";
 const base = `https://www.googleapis.com/youtube/v3/search/?part=snippet&key=${apiKey}&q=`;
 
 const output = document.querySelector('.output');
-const myInput = document.createElement('input');
-output.append(myInput);
-myInput.setAttribute('type','text');
-myInput.style.display="none";
-myInput.value = 'Bosstones';
-
-const btn = document.createElement('button');
-btn.textContent = 'Get Data';
-btn.style.display = 'none';
-output.append(btn);
-
 const myList = document.createElement('div');
 myList.setAttribute("class","gridContainer")
 output.append(myList);

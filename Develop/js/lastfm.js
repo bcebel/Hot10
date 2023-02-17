@@ -86,35 +86,35 @@ musicBrainzAPI(musicBrainzURL);
 
 
 const imageDiv = document.createElement('div');
-imageDiv.setAttribute("class", "test2");
+imageDiv.setAttribute("class", "test");
 lastFMImg = data.topalbums.album[0].image[3]["#text"]
 var image = new Image();
 image.src = lastFMImg;
 imageDiv.append(image);
 
 const imageDiv2 = document.createElement('div');
-imageDiv2.setAttribute("class", "test2");
+imageDiv2.setAttribute("class", "test");
 lastFMImg2 = data.topalbums.album[1].image[3]["#text"]
 var image2 = new Image();
 image2.src = lastFMImg2;
 imageDiv2.append(image2);
 
 const imageDiv3 = document.createElement('div');
-imageDiv3.setAttribute("class", "test2");
+imageDiv3.setAttribute("class", "test");
 lastFMImg3 = data.topalbums.album[2].image[3]["#text"]
 var image3 = new Image();
 image3.src = lastFMImg3;
 imageDiv3.append(image3);
 
 const imageDiv4 = document.createElement('div');
-imageDiv4.setAttribute("class", "test2");
+imageDiv4.setAttribute("class", "test");
 lastFMImg4 = data.topalbums.album[3].image[3]["#text"]
 var image4 = new Image();
 image4.src = lastFMImg4;
 imageDiv4.append(image4);
 
 const imageDiv5 = document.createElement('div');
-imageDiv5.setAttribute("class", "test2");
+imageDiv5.setAttribute("class", "test");
 lastFMImg5 = data.topalbums.album[4].image[3]["#text"]
 var image5 = new Image();
 image5.src = lastFMImg5;
@@ -122,14 +122,14 @@ imageDiv5.append(image5);
 
 
 const imageDiv6 = document.createElement('div');
-imageDiv6.setAttribute("class", "test2");
+imageDiv6.setAttribute("class", "test");
 lastFMImg6 = data.topalbums.album[7].image[3]["#text"]
 var image6 = new Image();
 image6.src = lastFMImg6;
 imageDiv6.append(image6);
 
 const imageDiv7 = document.createElement('div');
-imageDiv7.setAttribute("class", "test2");
+imageDiv7.setAttribute("class", "test");
 lastFMImg7 = data.topalbums.album[6].image[3]["#text"]
 var image7 = new Image();
 image7.src = lastFMImg7;
@@ -137,14 +137,14 @@ imageDiv7.append(image7);
 
 
 const imageDiv8 = document.createElement('div');
-imageDiv8.setAttribute("class", "test2");
+imageDiv8.setAttribute("class", "test");
 lastFMImg8 = data.topalbums.album[7].image[3]["#text"]
 var image8 = new Image();
 image8.src = lastFMImg8;
 imageDiv8.append(image8);
 
 const imageDiv9 = document.createElement('div');
-imageDiv9.setAttribute("class", "test2");
+imageDiv9.setAttribute("class", "test");
 lastFMImg9 = data.topalbums.album[8].image[3]["#text"]
 var image9 = new Image();
 image9.src = lastFMImg9;
@@ -152,7 +152,7 @@ imageDiv9.append(image9);
 
 
 const imageDiv10 = document.createElement('div');
-imageDiv10.setAttribute("class", "test2");
+imageDiv10.setAttribute("class", "test");
 lastFMImg10 = data.topalbums.album[9].image[3]["#text"]
 var image10 = new Image();
 image10.src = lastFMImg10;
