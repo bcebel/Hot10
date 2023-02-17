@@ -41,6 +41,7 @@ header {
     border-radius: 5px;
     padding: .5%;
     margin: 2%;
+    cursor: pointer;
 }
 
 main {
