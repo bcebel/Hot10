@@ -1,7 +1,7 @@
 
 const formYouTube = document.getElementById('search-form');
 const nameYouTube = formYouTube.elements['search-input'];
-const apiKey = "AIzaSyDIqwl4ZtaBrYCWStRfvbviqWbDNsv9zls";
+const apiKey = "AIzaSyAvwesTdSpv0qyXHwSb6p0gY9PwhIdhUxU";
 const base = `https://www.googleapis.com/youtube/v3/search/?part=snippet&key=${apiKey}&q=`;
 
 const output = document.querySelector('.output');
