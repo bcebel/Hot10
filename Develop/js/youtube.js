@@ -3,7 +3,7 @@ const formYouTube = document.getElementById('search-form');
 const nameYouTube = formYouTube.elements['search-input'];
 
 
-const apiKey = "AIzaSyBcQbzoFkfjfDyRCIqhn4x6Fo-w55YUxxc";
+const apiKey = "AIzaSyDebhxb3sfaJQ1TJJhxTbLQEYMaoplTC-U";
 //const searchTerm = '';
 const base = `https://www.googleapis.com/youtube/v3/search/?part=snippet&key=${apiKey}&q=`;
 
@@ -55,7 +55,7 @@ function addData(arr){
         thumb.setAttribute('src', res.snippet.thumbnails.high.url);
         const des = document.createElement('p');
         main.append(des);
-        main.style = 'align-content: center';
+        main.style = 'align-content center';
         des.innerHTML = `<h3>${res.snippet.title}</h3><small>${res.snippet.description}</small>`;
     }
 
@@ -67,3 +67,4 @@ formYouTube.addEventListener('submit', function(event){event.preventDefault();
     searchTerm = nameYouTube.value;});
     console.log(searchTerm);
     */
+// COKE IS BETTER THAN PEPSI
