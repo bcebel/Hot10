@@ -35,6 +35,7 @@ function addData(arr){
     arr.forEach((res) => {
         if (res.id.videoId){
         const main = document.createElement('div');
+        main.setAttribute("class","test");
         myList.append(main);
         main.id = "ytDiv";
         main.addEventListener('click', function() {
@@ -53,7 +54,7 @@ function addData(arr){
         const des = document.createElement('p');
         main.append(des);
         main.style = 'align-content center';
-        des.innerHTML = `<h3>${res.snippet.title}</h3><small>${res.snippet.description}</small>`;
+        des.innerHTML = `<h3><br>${res.snippet.title}</h3><small><br>${res.snippet.description}</small>`;
     }
 
     });
