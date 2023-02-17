@@ -7,7 +7,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    background-image: url("/Hot10/img/background1.jpg");
+    background-image: url("/img/background1.jpg");
     background-position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,18 +57,7 @@ main {
     float: right;
 }
 
-#results-left,
-/*
-#results-right {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: auto;
-}
-*/
-/* to hide history item slot until user has that many history searches */
 .hist-item {
-
 }
 
 .history-title {
@@ -76,15 +65,28 @@ main {
 }
 
 .test {
+    grid-column: 1/3;
     display: flex;
-    border: white solid 3px;
-    margin: 10px;
-    width: 500px;
-    height: 500px;
-align-content: center;
-align-items: center;
+    padding: 1em;
+
 }
+.test2 {
+    grid-column: 2/4;
+    display: flex;
+    padding: 1em;
+}
+
+.gridContainer{
+    display:flex;
+    flex direction: columns: width: 30%vw;
+    display: grid;
+    grid-auto-rows: 30em;
+
+
+}
+/*
 #ytDiv{
     border: white solid 3px;
-    width: fit-content;
+ width: fit-content;
 }
+*/

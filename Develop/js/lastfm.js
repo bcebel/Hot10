@@ -25,7 +25,7 @@ function getApi(requestUrl) {
     })
     .then(function (data) {
       console.log(data);
-
+/*
       var cityName = document.createElement('li');
       console.log(data);
       console.log(data.toptracks);
@@ -36,17 +36,17 @@ function getApi(requestUrl) {
         var bandName = document.createElement('h1');
         bandName.textContent = data.toptracks["@attr"].artist;
         lastFMdiv.prepend(bandName)
-/*
+
         var topTracks = document.createElement('li');
         topTracks.textContent ="Top Song "+data.toptracks.track[0].name
         lastFMdiv.append(topTracks)
-*/
+
         musicBrainzID=data.toptracks.track[0].artist.mbid
         console.log(musicBrainzID);
 
 musicBrainzURL='https://musicbrainz.org/ws/2/artist/'+musicBrainzID+'?inc=releases+genres+tags+release-groups+url-rels&type=&fmt=json';
 musicBrainzAPI(musicBrainzURL);
-
+*/
       })
     };
 
@@ -84,94 +84,97 @@ musicBrainzAPI(musicBrainzURL);
             lastFMdiv.append(topAlbums)
 */
 
+
 const imageDiv = document.createElement('div');
-imageDiv.setAttribute("class", "test");
+imageDiv.setAttribute("class", "test2");
 lastFMImg = data.topalbums.album[0].image[3]["#text"]
 var image = new Image();
 image.src = lastFMImg;
 imageDiv.append(image);
-document.getElementById('results-right').append(imageDiv);
 
 const imageDiv2 = document.createElement('div');
-imageDiv2.setAttribute("class", "test");
+imageDiv2.setAttribute("class", "test2");
 lastFMImg2 = data.topalbums.album[1].image[3]["#text"]
 var image2 = new Image();
 image2.src = lastFMImg2;
 imageDiv2.append(image2);
-document.getElementById('results-right').append(imageDiv2);
 
 const imageDiv3 = document.createElement('div');
-imageDiv3.setAttribute("class", "test");
+imageDiv3.setAttribute("class", "test2");
 lastFMImg3 = data.topalbums.album[2].image[3]["#text"]
 var image3 = new Image();
 image3.src = lastFMImg3;
 imageDiv3.append(image3);
-document.getElementById('results-right').append(imageDiv3);
 
 const imageDiv4 = document.createElement('div');
-imageDiv4.setAttribute("class", "test");
+imageDiv4.setAttribute("class", "test2");
 lastFMImg4 = data.topalbums.album[3].image[3]["#text"]
 var image4 = new Image();
 image4.src = lastFMImg4;
 imageDiv4.append(image4);
-document.getElementById('results-right').appendChild(imageDiv4);
 
 const imageDiv5 = document.createElement('div');
-imageDiv5.setAttribute("class", "test");
+imageDiv5.setAttribute("class", "test2");
 lastFMImg5 = data.topalbums.album[4].image[3]["#text"]
 var image5 = new Image();
 image5.src = lastFMImg5;
 imageDiv5.append(image5);
-document.getElementById('results-right').appendChild(imageDiv5);
 
 
 const imageDiv6 = document.createElement('div');
-imageDiv6.setAttribute("class", "test");
+imageDiv6.setAttribute("class", "test2");
 lastFMImg6 = data.topalbums.album[7].image[3]["#text"]
 var image6 = new Image();
 image6.src = lastFMImg6;
 imageDiv6.append(image6);
-document.getElementById('results-right').appendChild(imageDiv6);
 
 const imageDiv7 = document.createElement('div');
-imageDiv7.setAttribute("class", "test");
+imageDiv7.setAttribute("class", "test2");
 lastFMImg7 = data.topalbums.album[6].image[3]["#text"]
 var image7 = new Image();
 image7.src = lastFMImg7;
 imageDiv7.append(image7);
 
-document.getElementById('results-right').appendChild(imageDiv7);
 
 const imageDiv8 = document.createElement('div');
-imageDiv8.setAttribute("class", "test");
+imageDiv8.setAttribute("class", "test2");
 lastFMImg8 = data.topalbums.album[7].image[3]["#text"]
 var image8 = new Image();
 image8.src = lastFMImg8;
 imageDiv8.append(image8);
-document.getElementById('results-right').appendChild(imageDiv8);
 
 const imageDiv9 = document.createElement('div');
-imageDiv9.setAttribute("class", "test");
+imageDiv9.setAttribute("class", "test2");
 lastFMImg9 = data.topalbums.album[8].image[3]["#text"]
 var image9 = new Image();
 image9.src = lastFMImg9;
 imageDiv9.append(image9);
 
-document.getElementById('results-right').appendChild(imageDiv9);
 
 const imageDiv10 = document.createElement('div');
-imageDiv10.setAttribute("class", "test");
+imageDiv10.setAttribute("class", "test2");
 lastFMImg10 = data.topalbums.album[9].image[3]["#text"]
 var image10 = new Image();
 image10.src = lastFMImg10;
 imageDiv10.append(image10);
-document.getElementById('results-right').appendChild(imageDiv10);
 
-
+const gridContainerLastFM=document.createElement('div');
+gridContainerLastFM.setAttribute("class", "gridContainer")
+gridContainerLastFM.append(imageDiv)
+gridContainerLastFM.append(imageDiv2)
+gridContainerLastFM.append(imageDiv3)
+gridContainerLastFM.append(imageDiv4)
+gridContainerLastFM.append(imageDiv5)
+gridContainerLastFM.append(imageDiv6)
+gridContainerLastFM.append(imageDiv7)
+gridContainerLastFM.append(imageDiv8)
+gridContainerLastFM.append(imageDiv9)
+gridContainerLastFM.append(imageDiv10)
+document.getElementById('results-right').append(gridContainerLastFM);
 
           })
         };
-
+/*
         function musicBrainzAPI(musicBrainzURL) {
             fetch(musicBrainzURL)
             .then(function (response) {
@@ -179,6 +182,7 @@ document.getElementById('results-right').appendChild(imageDiv10);
             })
 
         }
+        */
 /*
         function albumCover(albumCoverURL) {
             fetch(musicBrainzURL)
@@ -199,7 +203,7 @@ form.addEventListener('submit', function(event){event.preventDefault();
     getSimilarURL='https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist='+fullName+'&api_key=291cf301be6213cb932aa743e9706019&format=json';
     getTopAlbumsURL= 'https://ws.audioscrobbler.com//2.0/?method=artist.gettopalbums&artist='+fullName+'&api_key=291cf301be6213cb932aa743e9706019&format=json'
     getApi(requestUrl);
-    getSimilar(getSimilarURL);
+ //   getSimilar(getSimilarURL);
 getTopAlbums(getTopAlbumsURL);
 });
 
