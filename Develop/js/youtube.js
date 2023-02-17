@@ -55,7 +55,7 @@ function addData(arr){
         thumb.setAttribute('src', res.snippet.thumbnails.high.url);
         const des = document.createElement('p');
         main.append(des);
-        main.style = 'align-content center';
+        main.style = 'align-content: center';
         des.innerHTML = `<h3>${res.snippet.title}</h3><small>${res.snippet.description}</small>`;
     }
 
