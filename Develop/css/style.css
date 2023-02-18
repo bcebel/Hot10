@@ -41,6 +41,7 @@ header {
     border-radius: 5px;
     padding: .5%;
     margin: 2%;
+    cursor: pointer;
 }
 
 main {
@@ -57,11 +58,20 @@ main {
     float: right;
 }
 
-.hist-item {
+#search-box {
+    color: white;
+    font-weight: bold;
+    font-size: larger;
 }
 
-.history-title {
-    color:rgb(238, 245, 238);
+#recent-search-items, a {
+    margin: 5px;
+    padding: 5px;
+    color: red;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: larger;
+    cursor: pointer;
 }
 
 .gridContainer{
@@ -76,7 +86,6 @@ main {
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-
 }
 
 
@@ -86,3 +95,26 @@ main {
  width: fit-content;
 }
 */
+
+
+/* MEDIA QUERIES */
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .list-group {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .list-group {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
