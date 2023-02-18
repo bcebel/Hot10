@@ -31,7 +31,7 @@ Our UNH coding teacher Nicole Thomas and her teaching assistant Robert Hoffman.
 
 ## Screen-capture
 
-![Photo of the schedule webpage with rows for each workday hour, and area for user input, and a save button.](`deployment photo will go here`?raw=true "Hot 10! Deployment Screen-capture")
+![Photo of the Hot10! music video and top album search webpage](`deployment photo will go here`?raw=true "Hot 10! Deployment Screen-capture")
 
 ## License
 
