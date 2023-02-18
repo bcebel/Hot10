@@ -31,7 +31,7 @@ Our UNH coding teacher Nicole Thomas and her teaching assistant Robert Hoffman.
 
 ## Screen-capture
 
-![Photo of the Hot10! music video and top album search webpage](`deployment photo will go here`?raw=true "Hot 10! Deployment Screen-capture")
+![Photo of the Hot10! music video and top album search webpage](/img/Capture1.PNG?raw=true "Hot 10! Deployment Screen-capture")
 
 ## License
 
