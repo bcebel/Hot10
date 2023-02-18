@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <!-- Header/search engine spot -->
+    <!-- Search Bar/Engine Section -->
     <header id="header" class="header">
       <div class="search-container">
         <h1 class="search-title">HOT 10! Search for the Best!</h1>
@@ -30,23 +30,21 @@
         </form>
       </div>
       <!-- Search History/Local Storage Section-->
-        <div id="search-box" class="search-history">
-          <h3 class="history-title">Recent Searches:</h3>
-          <!--prev searches will be saved to local storage, see script.js-->
-          <div id="recent-search-items"></div>
-        </div>
-        <!-- need to give this button functionality -->
-        <button type="button" class="history-btn" id="clearhist">
-          Clear History
-        </button>
+      <div id="search-box" class="search-history">
+        <h3 class="history-title">Recent Searches:</h3>
+        <!--prev searches will be saved to local storage, see script.js-->
+        <div id="recent-search-items"></div>
+      </div>
+      <!-- need to give this button functionality -->
+      <button type="button" class="history-btn" id="clearhist">
+        Clear History
+      </button>
     </header>
-    <!-- SEARCH RESULTS -->
+
     <main id="main-container" class="main-container">
       <!----- SUB-CONTAINER WILL HOLD THE RESULTS FOR BOTH API'S: -->
       <div id="all-results">
-        <!-- There needs to be an empty HTML element for us to write results data to. -->
-
-        <!-------- LEFT SIDE- FOR FIRST API SOURCE RESULTS: -------->
+        <!-------- LEFT SIDE- FOR FIRST API SOURCE RESULTS: YOUTUBE -------->
         <div id="results-left" class="list-group">
           <!-- id's are numbered 0-9, for the top 10 results: -->
           <div id="output" class="output"></div>
@@ -81,8 +79,7 @@
             <!-- #10 result goes here with href/a tag? -->
           </div>
         </div>
-        <!--- closes api-1 left column results div --->
-        <!--------- RIGHT SIDE- FOR SECOND API SOURCE RESULTS: --------->
+        <!--------- RIGHT SIDE- FOR SECOND API SOURCE RESULTS: LASTFM --------->
         <div id="results-right" class="list-group">
           <!-- id's are numbered 0-9, for the top 10 results: -->
           <div class="result-card result-0 api-2">
@@ -116,26 +113,12 @@
             <!-- #10 result goes here with href/a tag? -->
           </div>
         </div>
-        <!--- closes api-2 right column results div --->
       </div>
-      <!----- closing div tag for the entire "all-results" id div ----->
     </main>
-    <!-- Section for recent searches/local storage -->
-
-    <script
-      src="https://code.jquery.com/jquery-3.5.0.min.js"
-      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script
-      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-      crossorigin="anonymous" -->
-    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./Develop/js/youtube.js"></script>
     <script src="./Develop/js/lastfm.js"></script>
+    <!-- script.js is last so that the search history links can work and run after lastfm and youtube -->
     <script src="./Develop/js/script.js"></script>
-
   </body>
 </html>
