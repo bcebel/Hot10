@@ -290,7 +290,7 @@ form.addEventListener("submit", function (event) {
   //   getSimilar(getSimilarURL);
   getTopAlbums(getTopAlbumsURL);
 });
-
+// Calling this function for search history recall in the script.js
 function callFromHistory(event) {
   console.log(event.target.textContent);
   getTopAlbumsURL =
