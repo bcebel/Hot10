@@ -12,10 +12,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+/* header holds the h1 title, the search bar, search history links, and the clear history btn */
 header {
     display: block;
+    justify-content: center;
     text-align: center;
+    margin-bottom: 5%;
+    padding-left: 10%;
 }
 .search-title {
     color: rgb(5, 131, 249);
@@ -30,7 +33,7 @@ header {
     border-radius: 5px;
     border: 5px solid white;
 }
-
+/* search and clear history buttons */
 #search,
 #clearhist {
     background-color: red;
@@ -43,7 +46,7 @@ header {
     margin: 2%;
     cursor: pointer;
 }
-
+/* main holds all of the search results */
 main {
     display: block;
     color: white;
@@ -63,7 +66,7 @@ main {
     font-weight: bold;
     font-size: larger;
 }
-
+/* search history links */
 #recent-search-items, a {
     margin: 5px;
     padding: 5px;
