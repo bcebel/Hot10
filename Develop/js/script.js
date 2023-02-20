@@ -34,6 +34,7 @@ function renderArtists() {
     listArtist.innerHTML = artistsArray[i];
     // callFromHistory is in the lastFM.js and lets us re-click our recent searches
     listArtist.addEventListener("click", callFromHistory);
+    listArtist.addEventListener("click", callFromHistoryYT);
     // callFromHistory is in the lastFM.js and lets us re-click our recent searches
     // Youtube.js for search history links: NOT FUNCTIONING
     // listArtist.addEventListener("click", callFromHistoryYT);

@@ -50,7 +50,17 @@ function addData(arr) {
 
 // Calling this function for search history recall in the script.js
 // NOT FUNCTIONING.
-// function callFromHistoryYT(event) {
+function callFromHistoryYT(event) {
+
+searchTerm = event.target.textContent;
+const url = `${base}${searchTerm}&maxResults=11`;
+fetch(url)
+  .then((rep) => rep.json())
+  .then((data) => {
+    addData(data.items);
+  });
+};
+
 //   console.log(event.target.textContent);
 //   getTopAlbumsArtists =
 //     "https://www.googleapis.com/youtube/v3/search/?part=snippet" +
