@@ -1,56 +1,62 @@
+#recent-search-items,
+a {
+  margin: 5px;
+  padding: 5px;
+  color: red;
+  text-decoration: underline;
+  font-style: italic;
+  font-size: larger;
+  cursor: pointer;
+}
 *::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-image: url("/img/background1.jpg");
-  background-position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    background-image: url("/img/background1.jpg");
+    background-position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-/* header holds the h1 title, the search bar, search history links, and the clear history btn */
+
 header {
-  display: block;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 5%;
-  padding-left: 5%;
+    display: block;
+    text-align: center;
 }
 .search-title {
-  color: rgb(5, 131, 249);
-  font-size: 50px;
-  text-decoration: underline;
+    color: rgb(5, 131, 249);
+    font-size: 50px;
+    text-decoration: underline;
 }
 
 #search-input {
-  font-size: xx-large;
-  background-color: rgb(16, 12, 2);
-  color: white;
-  border-radius: 5px;
-  border: 5px solid white;
+    font-size: xx-large;
+    background-color: rgb(16, 12, 2);
+    color: white;
+    border-radius: 5px;
+    border: 5px solid white;
 }
-/* search and clear history buttons */
+
 #search,
 #clearhist {
-  background-color: red;
-  font-size: larger;
-  font-weight: bold;
-  color: rgb(238, 245, 238);
-  border: 2px solid rgb(11, 203, 251);
-  border-radius: 5px;
-  padding: 0.5%;
-  margin: 2%;
-  cursor: pointer;
+    background-color: red;
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(238, 245, 238);
+    border: 2px solid rgb(11, 203, 251);
+    border-radius: 5px;
+    padding: .5%;
+    margin: 2%;
 }
-/* main holds all of the search results */
+
 main {
-  display: block;
-  color: white;
+    display: block;
+    color: white;
+
 }
 
 #results-left {
@@ -74,64 +80,28 @@ main {
   cursor: pointer;
 }
 
-#search-box {
-  color: white;
-  font-weight: bold;
-  font-size: larger;
-}
-/* search history links */
-#recent-search-items,
-a {
-  margin: 5px;
-  padding: 5px;
-  color: red;
-  text-decoration: underline;
-  font-style: italic;
-  font-size: larger;
-  cursor: pointer;
+.history-title {
+    color:rgb(238, 245, 238);
 }
 
-.subheader {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  margin-right: 18%;
-  padding-bottom: 0;
+.gridContainer{
+ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
-
-.gridContainer {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 1;
-  /* flex-wrap: wrap; */
-  width: 100%;
-  margin: 5px;
-}
-
 .test {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
 }
 
-/* MEDIA QUERIES */
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-  /* on tablets, set columns to only be 60% of the width and not grow */
-  .test {
-    flex: 0 0 60%;
-    max-width: 60%;
-  }
-}
-/* media query for larger screens */
-@media screen and (min-width: 992px) {
-  header {
-    width: 90%;
-  }
 
-  .test {
-    flex: 0 0 40%;
-    max-width: 40%;
-  }
+
+#ytDiv{
+    border: white solid 3px;
+ width: fit-content;
 }
