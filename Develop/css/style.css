@@ -58,17 +58,20 @@ main {
   height: 50%;
   width: 60%;
   margin-left: 5%;
+  cursor: pointer;
 }
 
 #results-right {
   float: right;
   margin-right: 5%;
   padding: 5%;
+  cursor: pointer;
 }
 
 #results-right .test {
   padding-bottom: 30%;
   min-height: max-content;
+  cursor: pointer;
 }
 
 #search-box {
