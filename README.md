@@ -40,3 +40,7 @@ Please reference the project repository for license information.
 ## Deployment
 
 https://bcebel.github.io/Hot10/
+
+## Collaborator Portfolios with Hot10 added:
+
+https://nietru.github.io/my-portfolio/
