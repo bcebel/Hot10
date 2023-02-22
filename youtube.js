@@ -32,7 +32,6 @@ output.append(myList);
 
 formYouTube.addEventListener("submit", apiClick());
 formYouTube.addEventListener("submit", (e) => {
-  console.log(apiKey);
   searchTerm = nameYouTube.value;
   const url = `${base}${searchTerm}&maxResults=11`;
   fetch(url)

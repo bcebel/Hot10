@@ -83,8 +83,10 @@ function getTopAlbums(getTopAlbumsURL) {
 */
 
       const myLinkFM = document.createElement("a");
-      const imageDiv = document.createElement("div");
+      const imageDiv = document.createElement("amp-img");
       imageDiv.setAttribute("class", "test", "fmtest");
+      imageDiv.setAttribute("layout", "responsive");
+
       lastFMImg = data.topalbums.album[0].image[3]["#text"];
       var image = new Image();
       image.src = lastFMImg;
@@ -96,6 +98,8 @@ function getTopAlbums(getTopAlbumsURL) {
       myLinkFM.setAttribute("href", data.topalbums.album[0].url);
       myLinkFM.setAttribute("target", "_blank");
       console.log(data.topalbums.album[0].url);
+
+
 
       const myLinkFM2 = document.createElement("a");
       const imageDiv2 = document.createElement("div");
@@ -245,6 +249,8 @@ function getTopAlbums(getTopAlbumsURL) {
       gridContainerLastFM.append(imageDiv9);
       gridContainerLastFM.append(imageDiv10);
       document.getElementById("results-right").innerHTML = "";
+
+
       document.getElementById("results-right").append(gridContainerLastFM);
     });
 }
