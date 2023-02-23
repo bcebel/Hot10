@@ -14,7 +14,7 @@ The second API, LastFM, returns the top ten albums with am image of that album c
 
 There is also a section under the search bar that stores the last 5 searches the user entered, that are stored in local-storage, and can be revisited or cleared with a click or the "clear-history" button.
 
-We used google's AMP web component framework for the homepage animations.  AMP uses inline CSS.  
+We used google's AMP web component framework for the homepage animations. AMP uses inline CSS.
 
 During this project, we learned the importance of communication when working with our peers on a group project, and how complicated it can be to use github as a team rather than individuals.
 
@@ -24,10 +24,11 @@ Our UNH coding teacher Nicole Thomas and her teaching assistant Robert Hoffman.
 
 - https://www.youtube.com/
 - https://www.last.fm/
-- https://amp.dev/ 
+- https://amp.dev/
 
 ## Collaborators:
-<img src="groupphoto.png" alt="Alt text" title="Optional title"></img>
+
+![Picture of the collaborators for the Hot10! api Project-1 website](./img/groupphoto.png?raw=true)
 
 - Brian Ebel: https://github.com/bcebel
 - Nate Long: https://github.com/Tunestring
@@ -35,9 +36,7 @@ Our UNH coding teacher Nicole Thomas and her teaching assistant Robert Hoffman.
 
 ## Screen-capture
 
-<img src="screenshotproject1.png" alt="Alt text" title="Optional title"></img>
-<br><br>
-<img src="screenshotproject2.png" alt="Alt text" title="Optional title"></img>
+![Picture of the Hot10! Webpage after a search input has been entered](./img/screenshotproject2.png?raw=true)
 
 ## License
 

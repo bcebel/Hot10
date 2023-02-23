@@ -12,24 +12,13 @@
   <style amp-boilerplate>
  <noscript><style amp-boilerplate>
   
-  body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
-
-  @media screen and (max-width: 480px) {
-  .gridContainer {
-    width: 350px;
-  }
-}
-@media screen and (max-width: 350px) {
-  .gridContainer {
-    width: 280px;
-}
-}
-
+body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+/* CSS STYLING INLINE: */
 .subheader {
   font-size: 1.75em;
-    font-family: sans; color: white;
-    text-shadow: 2px 2px 4px black, 0 0 1em black, 0 0 0.2em black;
-    padding-left: 2em;
+  font-family: sans; color: white;
+  text-shadow: 2px 2px 4px black, 0 0 1em black, 0 0 0.2em black;
+  padding-left: 2em;
 }
 
   #recent-search-items, a {
@@ -46,6 +35,118 @@
 #recent-search-items:hover, a:hover {
   text-shadow: 2px 2px 4px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(5, 131, 249);
 }
+
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background-position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: block;
+  text-align: center;
+}
+
+.search-title {
+  color: rgb(5, 131, 249);
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+#search-input {
+  font-size: xx-large;
+  background-color: rgb(16, 12, 2);
+  color: white;
+  border-radius: 5px;
+  border: 5px solid white;
+}
+
+#search-input:hover {
+  border: 5px solid rgb(5, 131, 249);
+}
+
+#search,
+#clearhist {
+  background-color: red;
+  font-size: larger;
+  font-weight: bold;
+  color: rgb(238, 245, 238);
+  border: 3px solid transparent;
+  border-radius: 5px;
+  padding: .5%;
+  margin: 2%;
+}
+
+#search:hover, #clearhist:hover {
+  cursor: pointer;
+  border: rgb(5, 131, 249) solid 3px;
+  text-shadow: 2px 2px 4px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+main {
+  display: flex;
+  flex-basis: auto;
+  color: white;
+}
+
+#results-left {
+  float: left;
+}
+
+#results-right {
+  float: right;
+}
+
+.history-title {
+  color:rgb(238, 245, 238);
+}
+
+.gridContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  max-width: 100%;
+  color: white;
+  font-size: 1.25rem;
+  border:none;
+  text-shadow: 2px 2px 4px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+.gridContainer:hover {
+  cursor: pointer;
+  border: inset solid 1px orangered;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .gridContainer {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .gridContainer {
+    width: 280px;
+  }
+}
+
 @media screen and (max-width: 400px) {
 #recent-search-items, a {
   margin: 2px;
@@ -57,124 +158,14 @@
   cursor: pointer;
 }}
 
-*::before,
-::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    background-position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-header {
-    display: block;
-    text-align: center;
-}
-.search-title {
-    color: rgb(5, 131, 249);
-    font-size: 50px;
-    text-decoration: underline;
-}
-
-#search-input {
-    font-size: xx-large;
-    background-color: rgb(16, 12, 2);
-    color: white;
-    border-radius: 5px;
-    border: 5px solid white;
-}
-#search-input:hover{
-  border: 5px solid rgb(5, 131, 249);
-}
-#search,
-#clearhist {
-    background-color: red;
-    font-size: larger;
-    font-weight: bold;
-    color: rgb(238, 245, 238);
-    border: 3px solid transparent;
-    border-radius: 5px;
-    padding: .5%;
-    margin: 2%;
-}
-#search:hover, #clearhist:hover{
-  cursor: pointer;
-  border: rgb(5, 131, 249) solid 3px;
-  text-shadow: 2px 2px 4px black, 0 0 1em black, 0 0 0.2em black;
-}
-main {
-    display: flex;
-    flex-basis: auto;
-    color: white;
-   }
-
-#results-left {
-    float: left;
-}
-
-#results-right {
-    float: right;
-}
-
-
-.history-title {
-    color:rgb(238, 245, 238);
-}
-
-.gridContainer{
- 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: auto;
-max-width: 100%;
-color: white;
-font-size: 1.25rem;
-border:none;
-text-shadow: 2px 2px 4px black, 0 0 1em black, 0 0 0.2em black;
-
-}
-.gridContainer:hover{
-  cursor: pointer;
-  border: inset solid 1px orangered;
-}
-.test {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    height: auto;
-max-width: 100%;
-
-
-
-
-}
-
-/*
-#ytDiv{
-    border: white solid 3px;
- width: fit-content;
-}
-*/
-
-
 </style></noscript>
-  <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
-
+<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+<!-- END OF CSS STYLING -->
 </head>
 
-
-
-
-<body background="fire.jpg">
-        <amp-bodymovin-animation layout="responsive" width="1000" height="100" src="https://assets3.lottiefiles.com/packages/lf20_7iux5gpv.json" >
-      </amp-bodymovin-animation>
+<body background="./img/fire.jpg">
+  <amp-bodymovin-animation layout="responsive" width="1000" height="100" src="https://assets3.lottiefiles.com/packages/lf20_7iux5gpv.json" >
+  </amp-bodymovin-animation>
 
   <!-- Search Bar/Engine Section -->
   <header amp-fx="fade-in fly-in-right" data-duration="1000ms" id="header" class="header">
@@ -184,7 +175,6 @@ max-width: 100%;
         <input id="search-input" class="form-input" type="text" placeholder="Search!" />
         <button id="search" class="btn btn-info btn-block">Search!</button>
       </form>
-
     </div>
     <!-- Search History/Local Storage Section-->
     <div id="search-box" class="search-history">
@@ -199,31 +189,25 @@ max-width: 100%;
   </header>
 
   <main id="main-container" class="main-container">
-    
     <!----- SUB-CONTAINER WILL HOLD THE RESULTS FOR BOTH API'S: -->
     <div amp-fx="fade-in fly-in-bottom" data-duration="1000ms" id="all-results">
-    
       <h2 class="subheader">Top 10 YouTube results first!</h2>
       <!-------- LEFT SIDE- FOR FIRST API SOURCE RESULTS: YOUTUBE -------->
       <div amp-fx="fade-in fly-in-bottom" data-duration="1000ms"  id="results-left" class="list-group">
         <h2 class="subheader">Scroll down for the Album Covers with LastFM links, click around and have fun!!</h2>
-
         <!-- id's are numbered 0-9, for the top 10 results: -->
-        <div amp-fx="fly-in-bottom" data-duration="1000ms" data-fly-in-distance="20%" id="output" class="output"></div>      
-
-  
+        <div amp-fx="fly-in-bottom" data-duration="1000ms" data-fly-in-distance="20%" id="output" class="output"></div>
         <!--------- RIGHT SIDE- FOR SECOND API SOURCE RESULTS: LASTFM --------->
         <div amp-fx="fly-in-bottom" data-duration="1000ms" data-fly-in-distance="20%" id="results-right" class="list-group" >
         </amp-script>
-          <!-- id's are numbered 0-9, for the top 10 results: -->
         </div>
       </div>
     </div>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="/Hot10/youtube.js"></script>
-  <script src="/Hot10/lastfm.js"></script>
+  <script src="./Develop/youtube.js"></script>
+  <script src="./Develop/lastfm.js"></script>
   <!-- script.js is last so that the search history links can work and run after lastfm and youtube -->
-  <script src="/Hot10/script.js"></script>
+  <script src="./Develop/script.js"></script>
 </body>
 </html>
