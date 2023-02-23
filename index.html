@@ -93,12 +93,16 @@ header {
     font-size: larger;
     font-weight: bold;
     color: rgb(238, 245, 238);
-    border: 2px solid rgb(11, 203, 251);
+    border: 3px solid transparent;
     border-radius: 5px;
     padding: .5%;
     margin: 2%;
 }
-
+#search:hover, #clearhist:hover{
+  cursor: pointer;
+  border: rgb(5, 131, 249) solid 3px;
+  text-shadow: 2px 2px 4px black, 0 0 1em black, 0 0 0.2em black;
+}
 main {
     display: flex;
     flex-basis: auto;
