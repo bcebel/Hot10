@@ -27,6 +27,7 @@ Our UNH coding teacher Nicole Thomas and her teaching assistant Robert Hoffman.
 - https://amp.dev/ 
 
 ## Collaborators:
+<img src="groupphoto.png" alt="Alt text" title="Optional title"></img>
 
 - Brian Ebel: https://github.com/bcebel
 - Nate Long: https://github.com/Tunestring
@@ -34,7 +35,9 @@ Our UNH coding teacher Nicole Thomas and her teaching assistant Robert Hoffman.
 
 ## Screen-capture
 
-![Photo of the Hot10! music video and top album search webpage](/img/Capture2.PNG?raw=true "Hot 10! Deployment Screen-capture")
+<img src="screenshotproject1.png" alt="Alt text" title="Optional title"></img>
+<br><br>
+<img src="screenshotproject2.png" alt="Alt text" title="Optional title"></img>
 
 ## License
 
